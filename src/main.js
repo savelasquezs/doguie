@@ -11,5 +11,5 @@ const consultar=async()=>{
     image.src=data.url
 
 }
-
 button.addEventListener('click',consultar)
+consultar()
