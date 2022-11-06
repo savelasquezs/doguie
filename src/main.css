@@ -11,38 +11,117 @@
 body{
     background-color: var(--body-color);
     font-family: 'Dancing Script', cursive;
-}
-h1{
-    color:var(--title-color)
+    color: var(--text-color);
 }
 
-main{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    
+.photos{
+    margin-top: 80px
+    ;
 }
 
-
-.img-container{
-    display: grid;
-    width: 500px;
-    min-width: 300px;
-    justify-items: center;
-    
+.card{
+    margin-bottom:20px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 3px 2px 14px 0px rgba(0,0,0,0.75);
+    border: none;
+    transition: all .5s;
 }
-.img-container button{
-    width: 50%;
-    padding: px;
-    border:1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    margin-bottom: 20px;
+
+.card:hover{
+    transform: scale(1.2);
+}
+.card img{
+    max-height:200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card a{
+   padding: 0;
+}
+.card .info{
+    position: absolute;
+    bottom: 10px;
+    display: block;
+   
+}
+.card-title{
+    margin-bottom: 0;
+}
+
+.card-body{
     background-color: var(--container-color);
-    color:var(--text-color)
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top:5px;
+    text-align: center;
+    min-height: 110px;
+ 
+}
+.heart{
+    background-color: transparent;
+    border: none;
+}
+.modal-content{
+    border: none;
+}
+.modal-header, .modal-body, .modal-footer{
+
+    background-color: var(--border-color);
+   
+}
+.modal-body{
+    font-size: 1rem;
+}
+.modal-body img{
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: 450px;
+    
+    box-shadow: 3px 2px 14px 0px rgba(0,0,0,0.75);
+}
+.container-fav{
+    box-shadow: 3px 2px 14px 0px rgba(0,0,0,0.75);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+
+}
+.container-fav img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    transition: all .2s;
+}
+.container-fav img:hover{
+    transform: scale(1.2) rotate(-5deg);
+    filter: sepia(1);
+    opacity: 0.5;
+}
+.btnSacarPerrito{
+    border-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
 }
 
-.img-container img{
-    border-radius: 15px;
-    border: 2px solid var(--border-color);
-    box-shadow: 5px 3px 10px 5px var(--light-text-color)
+
+
+
+@media (max-width:1189px) {
+    .card{
+        width: 12rem;
+    }
+    .photos{
+        grid-template-columns:repeat(auto-fill, 300px); ;
+    }
+}
+
+@media (max-width:995px) {
+    .card{
+        width: 15rem;
+    }
+    .photos{
+        grid-template-columns:repeat(auto-fill, 300px); ;
+    }
 }
