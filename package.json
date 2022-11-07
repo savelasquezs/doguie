@@ -1,0 +1,14 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "This is a homemade project, based on some of the learned stuff in platzi. it uses API,axios, and boostrap. ",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "author": "Santiago Velásquez santyvano@outlook.com",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
